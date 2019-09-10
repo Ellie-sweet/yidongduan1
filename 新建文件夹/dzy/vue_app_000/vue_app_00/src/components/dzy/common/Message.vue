@@ -14,17 +14,22 @@
             </div>
             <!-- 两个按钮分类 -->
             <div>
-              <!-- <a href="">全部</a>
-              <a href="">综合排序</a> -->
-              <mt-tab-container v-model="active">
-                <mt-tab-container-item id="all" value="全部">
-                  <mt-cell></mt-cell>
-                </mt-tab-container-item>
-                <mt-tab-container-item id="rank" value="综合排序">
-                  <mt-cell></mt-cell>
-                </mt-tab-container-item>
-              </mt-tab-container>
+              <div class="btn">
+                <mt-button size="small" @click.native.prevent="active='all'">全部</mt-button>
+                <mt-button size="small" @click.native.prevent="active='rank'">综合排序</mt-button>
+              </div>
+              <div>      
+                <mt-tab-container v-model="active">
+                  <mt-tab-container-item id="all">
+                    <mt-cell title="图片"></mt-cell>
+                  </mt-tab-container-item>
+                  <mt-tab-container-item id="rank">
+                    <mt-cell></mt-cell>
+                  </mt-tab-container-item>
+                </mt-tab-container>
+              </div>
             </div>
+            
             <!-- 列出的豆瓣评分8.5分以上的书籍 -->
             <div>
               <!-- 左边图片与文字 -->

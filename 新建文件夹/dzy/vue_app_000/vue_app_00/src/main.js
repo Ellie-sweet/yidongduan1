@@ -7,8 +7,10 @@ import router from './router'
 import MintUI from "mint-ui"
 // 单引入mint-ui样式文件
 import "mint-ui/lib/style.css"
+
 // 将mint-ui注册vue
 Vue.use(MintUI)
+
 // 引入图标字体文件
 import "./font/iconfont.css"
 
