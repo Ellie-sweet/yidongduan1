@@ -14,8 +14,16 @@
             </div>
             <!-- 两个按钮分类 -->
             <div>
-              <a href="">全部</a>
-              <a href="">综合排序</a>
+              <!-- <a href="">全部</a>
+              <a href="">综合排序</a> -->
+              <mt-tab-container v-model="active">
+                <mt-tab-container-item id="all" value="全部">
+                  <mt-cell></mt-cell>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="rank" value="综合排序">
+                  <mt-cell></mt-cell>
+                </mt-tab-container-item>
+              </mt-tab-container>
             </div>
             <!-- 列出的豆瓣评分8.5分以上的书籍 -->
             <div>
@@ -42,7 +50,11 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      active:"all",
+    }
+  },
 }
 </script>
 
