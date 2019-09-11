@@ -1,6 +1,6 @@
 <template>
   <div>
-    <message></message>
+    
     <div class="container">
             <!-- 首页搜索框 -->
             <div>
@@ -8,9 +8,11 @@
             </div>
             <!-- 轮播图 -->
             <div>
-              <mt-swipe :show-indicator="false">
-                <mt-swipe-item >
-                  <message></message>
+              <mt-swipe :show-indicator="true">
+                <mt-swipe-item> 
+                  <message
+                  v-for="(item,index) in images" :key="index" 
+                  :imageurl="item.img"></message>
                 </mt-swipe-item>
               </mt-swipe>
             </div>
@@ -68,6 +70,14 @@ export default {
     return {
       value:"",
       active:"all",
+      images:[
+        {img:require("@/assets/chongban.png")},  
+        {img:require("@/assets/death.png")},
+        {img:require("@/assets/huayu.png")},
+        {img:require("@/assets/kexue.png")},
+        {img:require("@/assets/xinlixue.png")},
+        {img:require("@/assets/bianji.png")},
+      ],
     }
   },
   methods:{

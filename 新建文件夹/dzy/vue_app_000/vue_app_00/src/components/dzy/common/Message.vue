@@ -2,7 +2,7 @@
   <div>   
     <!-- 轮播图 -->
     <div>
-      <img src="../../../assets/chongban.png"> 
+      <img :src="imageurl"> 
     </div>
   </div>
 </template>
@@ -11,11 +11,9 @@
 // 引入01子组件
 
 export default {
-  data(){
-    return {
-     
-    }
-  },
+  props:{
+    imageurl:{},
+  }
   
   
 }
