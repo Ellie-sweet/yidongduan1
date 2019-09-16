@@ -22,7 +22,7 @@
               </mt-swipe> -->
             </div>
             <!-- 分类 -->
-            <div>
+            <div class="hobby">
               <a href="">猜你喜欢</a>
             </div>
             <!-- 两个按钮分类 -->
@@ -31,24 +31,30 @@
                 <mt-button size="small" @click.native.prevent="active='all'">全部</mt-button>
                 <mt-button size="small" @click.native.prevent="active='rank'">综合排序</mt-button>
               </div>
-              <div>      
+              <div class="images">      
                 <mt-tab-container v-model="active">
-                  <mt-tab-container-item id="all">
+                  <mt-tab-container-item id="all" class="allimgs">
                     <mt-cell>
-                      <div><img src="@/assets/chongban.png" class="image"></div>
+                      <div><img src="@/assets/hunxue.png" class="image"></div>
                     </mt-cell>
                     <mt-cell>
-                      <img src="@/assets/kexue.png" >
+                      <img src="@/assets/jinghua.png" >
                     </mt-cell>
-                      <img src="@/assets/death.png" >
+                      <img src="@/assets/lutedan.png" >
                     <mt-cell>
-                      <img src="@/assets/huayu.png" >
+                      <img src="@/assets/mogen.png" >
                     </mt-cell>
                     <mt-cell>
-                      <img src="@/assets/kexue.png" >
+                      <img src="@/assets/shengwu.png" >
+                    </mt-cell>
+                    <mt-cell>
+                      <img src="@/assets/qie.png" >
+                    </mt-cell>
+                    <mt-cell>
+                      <img src="@/assets/saichuan.png" >
                     </mt-cell>
                   </mt-tab-container-item>
-                  <mt-tab-container-item id="rank">
+                  <mt-tab-container-item id="rank" class="rankimgs">
                     <mt-cell></mt-cell>
                   </mt-tab-container-item>
                 </mt-tab-container>
@@ -82,6 +88,7 @@
 <script>
 // 引入子组件
 import Message from "./Message"
+// import '../css/mint-ui.scss'
 export default {
   data(){
     return {
@@ -117,16 +124,37 @@ export default {
     width:100%;
     height:52px;
     position:absolute;
-    top:10px;
+    top:5px;
   }
   .mint-search>.mint-searchbar{
-    background-color:#ddd;
-    border-radius:20px;  
-    padding:0px 0px;
-    z-index:0;
+    background-color:#ddd  !important;
+    border-radius:40px  !important;  
+    padding:0px 0px  !important;
+    z-index:0  !important;
   }
   .mint-searchbar-inner{
-    background-color:#ddd;
+    background-color:#ddd  !important;
+  }
+  .imgs{
+    position:absolute;
+    /* top:58px; */
+  }
+  .hobby{
+    position:absolute;
+    /* top:160px; */
+  }
+  .images{
+    position:absolute;
+    /* top:170px;          */
+  }
+  .allimgs{
+    margin:5px;
+  }
+  .rankimgs{
+    margin:5px;
+  }
+  div.mint-cell-wrapper{
+    width:152px;
   }
   .image{
     left:0px;
