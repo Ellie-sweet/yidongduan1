@@ -35,17 +35,17 @@
                 <mt-tab-container v-model="active">
                   <mt-tab-container-item id="all">
                     <mt-cell>
-                      <div><img src="@/assets/chongban.png" ></div>
+                      <div><img src="@/assets/chongban.png" class="image"></div>
                     </mt-cell>
                     <mt-cell>
-                      <div><img src="@/assets/kexue.png" ></div>
+                      <img src="@/assets/kexue.png" >
                     </mt-cell>
-                      <div><img src="@/assets/death.png" ></div>
+                      <img src="@/assets/death.png" >
                     <mt-cell>
-                      <div><img src="@/assets/huayu.png" ></div>
+                      <img src="@/assets/huayu.png" >
                     </mt-cell>
                     <mt-cell>
-                      <div><img src="@/assets/kexue.png" ></div>
+                      <img src="@/assets/kexue.png" >
                     </mt-cell>
                   </mt-tab-container-item>
                   <mt-tab-container-item id="rank">
@@ -128,7 +128,7 @@ export default {
   .mint-searchbar-inner{
     background-color:#ddd;
   }
-  mt-cell{
-    
+  .image{
+    left:0px;
   }
 </style>
