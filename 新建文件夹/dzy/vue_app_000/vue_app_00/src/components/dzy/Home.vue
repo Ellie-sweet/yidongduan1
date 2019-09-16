@@ -92,5 +92,8 @@ export default {
 </script>
 
 <style>
-
+  .app-container{
+    margin:0px;
+    padding:0px;
+  }
 </style>

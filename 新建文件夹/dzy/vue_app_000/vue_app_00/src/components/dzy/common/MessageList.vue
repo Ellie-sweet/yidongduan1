@@ -7,11 +7,17 @@
               <mt-search v-model="value" cancel-text="取消" placeholder="搜索"></mt-search>
             </div>
             <!-- 轮播图 -->
-            <div>
-              <!-- <mt-swipe :show-indicator="false">
+            <div class="imgs">
+              <!-- <mt-swipe :show-indicator="true">
                 <mt-swipe-item>  -->
-                  <message v-for="(item,index) of images" :key="index"
-                  :imgurl="require(item.img)"></message>
+                  <!-- <message
+                  v-for="(item,index) in images" :key="index" 
+                  :imageurl="item.img"></message> -->
+                  <img src="@/assets/chongban.png" >
+                  <img src="@/assets/death.png" >
+                  <img src="@/assets/huayu.png" >
+                  <img src="@/assets/kexue.png" >
+
                 <!-- </mt-swipe-item>
               </mt-swipe> -->
             </div>
@@ -89,6 +95,25 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .container{
+    position:relative;
+    top:0px;
+    left:0px;
+  }
+  .mint-search{
+    width:100%;
+    height:52px;
+    position:absolute;
+    top:10px;
+  }
+  .mint-search>.mint-searchbar{
+    background-color:#ddd;
+    border-radius:20px;  
+    padding:0px 0px;
+    z-index:0;
+  }
+  .mint-searchbar-inner{
+    background-color:#ddd;
+  }
 </style>
