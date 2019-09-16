@@ -2,7 +2,7 @@
   <div>   
     <!-- 轮播图 -->
     <div>
-      <img :src="imageurl"> 
+      <img :src="imgurl"> 
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 
 export default {
   props:{
-    imageurl:{},
+    imgurl:{default:""},
   }
   
   

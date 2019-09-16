@@ -8,13 +8,12 @@
             </div>
             <!-- 轮播图 -->
             <div>
-              <mt-swipe :show-indicator="true">
-                <mt-swipe-item> 
-                  <message
-                  v-for="(item,index) in images" :key="index" 
-                  :imageurl="item.img"></message>
-                </mt-swipe-item>
-              </mt-swipe>
+              <!-- <mt-swipe :show-indicator="false">
+                <mt-swipe-item>  -->
+                  <message v-for="(item,index) of images" :key="index"
+                  :imgurl="require(item.img)"></message>
+                <!-- </mt-swipe-item>
+              </mt-swipe> -->
             </div>
             <!-- 分类 -->
             <div>
@@ -71,12 +70,12 @@ export default {
       value:"",
       active:"all",
       images:[
-        {img:require("@/assets/chongban.png")},  
-        {img:require("@/assets/death.png")},
-        {img:require("@/assets/huayu.png")},
-        {img:require("@/assets/kexue.png")},
-        {img:require("@/assets/xinlixue.png")},
-        {img:require("@/assets/bianji.png")},
+        {img:"@/assets/chongban.png"},  
+        {img:"@/assets/death.png"},
+        {img:"@/assets/huayu.png"},
+        {img:"@/assets/kexue.png"},
+        {img:"@/assets/xinlixue.png"},
+        {img:"@/assets/bianji.png"},
       ],
     }
   },
