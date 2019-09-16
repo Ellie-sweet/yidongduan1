@@ -63,6 +63,8 @@ export default {
 
 <style scoped>
   .container{
+    width:;
+    height:;
     text-align:center;
     position:relative;
   }
@@ -127,14 +129,15 @@ export default {
     color:#fff;
     font-size:20px;
   }
-  .container>.note>a{
+  .container>.note{
     width:142px;
     height:45px;
-    display:flex;
     border:1px solid rgb(230,230,230);
     border-radius:20px;
-    text-decoration-line:none;
     position:absolute;
     
+  }
+  .container>.note>a{
+    text-decoration-line:none;
   }
 </style>

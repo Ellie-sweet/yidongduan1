@@ -92,8 +92,11 @@ export default {
 </script>
 
 <style>
-  .app-container{
-    margin:0px;
-    padding:0px;
+  .page-tabbar{
+    overflow:hidden;   /*元素溢出隐藏*/
+  }
+  .page-wrap{
+    overflow:auto;     /*溢出数据显示滚动条*/ 
+    padding-bottom:60px;  /*底部导航条*/
   }
 </style>

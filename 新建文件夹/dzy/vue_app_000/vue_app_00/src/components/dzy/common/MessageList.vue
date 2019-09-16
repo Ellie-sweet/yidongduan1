@@ -8,18 +8,7 @@
             </div>
             <!-- 轮播图 -->
             <div class="imgs">
-              <!-- <mt-swipe :show-indicator="true">
-                <mt-swipe-item>  -->
-                  <!-- <message
-                  v-for="(item,index) in images" :key="index" 
-                  :imageurl="item.img"></message> -->
-                  <img src="@/assets/chongban.png" >
-                  <img src="@/assets/death.png" >
-                  <img src="@/assets/huayu.png" >
-                  <img src="@/assets/kexue.png" >
-
-                <!-- </mt-swipe-item>
-              </mt-swipe> -->
+              <message></message> 
             </div>
             <!-- 分类 -->
             <div class="hobby">
@@ -94,14 +83,14 @@ export default {
     return {
       value:"",
       active:"all",
-      images:[
-        {img:"@/assets/chongban.png"},  
-        {img:"@/assets/death.png"},
-        {img:"@/assets/huayu.png"},
-        {img:"@/assets/kexue.png"},
-        {img:"@/assets/xinlixue.png"},
-        {img:"@/assets/bianji.png"},
-      ],
+      // images:[
+      //   {img:"@/assets/chongban.png"},  
+      //   {img:"@/assets/death.png"},
+      //   {img:"@/assets/huayu.png"},
+      //   {img:"@/assets/kexue.png"},
+      //   {img:"@/assets/xinlixue.png"},
+      //   {img:"@/assets/bianji.png"},
+      // ],
     }
   },
   methods:{
@@ -116,9 +105,9 @@ export default {
 
 <style scoped>
   .container{
+    width:100%;
+    height:812px;
     position:relative;
-    top:0px;
-    left:0px;
   }
   .mint-search{
     width:100%;
@@ -126,7 +115,7 @@ export default {
     position:absolute;
     top:5px;
   }
-  .mint-search>.mint-searchbar{
+  /* .mint-search>.mint-searchbar{
     background-color:#ddd  !important;
     border-radius:40px  !important;  
     padding:0px 0px  !important;
@@ -134,14 +123,14 @@ export default {
   }
   .mint-searchbar-inner{
     background-color:#ddd  !important;
-  }
+  } */
   .imgs{
     position:absolute;
-    /* top:58px; */
+    top:58px;
   }
   .hobby{
     position:absolute;
-    /* top:160px; */
+    top:160px;
   }
   .images{
     position:absolute;

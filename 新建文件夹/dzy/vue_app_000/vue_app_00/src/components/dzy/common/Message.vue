@@ -1,9 +1,9 @@
 <template>
   <div>   
     <!-- 轮播图 -->
-    <div>
-      <img :src="imgurl"> 
-    </div>
+    <!-- <div v-for="(item,index) in images" :key="index"> -->
+      <img src="@/assets/chongban.png"> 
+    <!-- </div> -->
   </div>
 </template>
 
@@ -11,8 +11,17 @@
 // 引入01子组件
 
 export default {
-  props:{
-    imgurl:{default:""},
+  data(){
+    return {
+      images:[
+          {"img":"@/assets/chongban.png"},  
+          {"img":"@/assets/death.png"},
+          {"img":"@/assets/huayu.png"},
+          {"img":"@/assets/kexue.png"},
+          {"img":"@/assets/xinlixue.png"},
+          {"img":"@/assets/bianji.png"},
+        ],
+      }
   }
   
   
