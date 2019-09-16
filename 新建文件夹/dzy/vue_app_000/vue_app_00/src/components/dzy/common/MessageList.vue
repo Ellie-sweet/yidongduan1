@@ -34,7 +34,19 @@
               <div>      
                 <mt-tab-container v-model="active">
                   <mt-tab-container-item id="all">
-                    <mt-cell title="图片"></mt-cell>
+                    <mt-cell>
+                      <div><img src="@/assets/chongban.png" ></div>
+                    </mt-cell>
+                    <mt-cell>
+                      <div><img src="@/assets/kexue.png" ></div>
+                    </mt-cell>
+                      <div><img src="@/assets/death.png" ></div>
+                    <mt-cell>
+                      <div><img src="@/assets/huayu.png" ></div>
+                    </mt-cell>
+                    <mt-cell>
+                      <div><img src="@/assets/kexue.png" ></div>
+                    </mt-cell>
                   </mt-tab-container-item>
                   <mt-tab-container-item id="rank">
                     <mt-cell></mt-cell>
@@ -115,5 +127,8 @@ export default {
   }
   .mint-searchbar-inner{
     background-color:#ddd;
+  }
+  mt-cell{
+    
   }
 </style>
