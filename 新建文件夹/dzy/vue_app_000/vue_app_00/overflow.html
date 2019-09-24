@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  .container {
+  width: 100%;
+  white-space: nowrap;
+  max-width: 1200px;
+  min-width: 375px;
+}
+.box {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+}
+.box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.cube {
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  width: 200px;
+  background: #f00;
+  margin-top: 0.5rem;
+}
+.box > .cube:not(:first-child) {
+  margin-left: 1rem;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+        <div class="box">
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+        </div>
+      </div>
+</body>
+</html>
