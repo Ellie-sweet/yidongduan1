@@ -1,38 +1,46 @@
 <template>
   <div class="container">
     <!-- 按钮 -->
-    <div>
-      <mt-button v-for="(item,index) of list" :key="index" size="small" @click.native.prevent="active='{{index+1}}'"  @click="btn(index)" :class="{colorChange:index+1==dynamic}">{{item.name}}</mt-button>
-      
+    <div  >
+      <!--  -->
+      <mt-button v-for="(item,index) of list" :key="index" size="small"  @click="btn(index,active)" @click.native.prevent="active='index'" :class="{colorChange:index==dynamic}">{{item.name}}</mt-button>
+      <!-- <mt-button size="small" @click.native.prevent="active='1'">猜你喜欢</mt-button>
+      <mt-button size="small" @click.native.prevent="active='2'">鱼友推荐</mt-button>
+      <mt-button size="small" @click.native.prevent="active='3'">豆瓣8.5</mt-button>
+      <mt-button size="small" @click.native.prevent="active='4'">free</mt-button>
+      <mt-button size="small" @click.native.prevent="active='5'">越贵越省钱</mt-button>
+      <mt-button size="small" @click.native.prevent="active='6'">新上架</mt-button>
+      <mt-button size="small" @click.native.prevent="active='7'">只在多抓鱼有</mt-button>
+      <mt-button size="small" @click.native.prevent="active='8'">新出版</mt-button> -->
     </div>
     <!-- 子面板 -->
     <div class="selection">
       <mt-tab-container v-model="active">
-        <mt-tab-container-item id="1">
+        <mt-tab-container-item id="0">
           <mt-cell >aa</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="2">
+        <mt-tab-container-item id="1">
           <mt-cell >bb</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="3">
+        <mt-tab-container-item id="2">
           <mt-cell >cc</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="4">
+        <mt-tab-container-item id="3">
           <mt-cell >dd</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="5">
+        <mt-tab-container-item id="4">
           <mt-cell >ee</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="6">
+        <mt-tab-container-item id="5">
           <mt-cell >ff</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="7">
+        <mt-tab-container-item id="6">
           <mt-cell >gg</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="8">
+        <mt-tab-container-item id="7">
           <mt-cell >hh</mt-cell>
         </mt-tab-container-item>
-        <mt-tab-container-item id="9">
+        <mt-tab-container-item id="8">
           <mt-cell >ii</mt-cell>
         </mt-tab-container-item>
       </mt-tab-container>
@@ -42,10 +50,10 @@
 
 <script>
 export default {
-  data(){ 
+  data(){
     return {
-      active:"2",
-      
+      active:"1",
+      dynamic:-1,
       list:[
         {name:"全部分类"},
         {name:"猜你喜欢"},
@@ -60,8 +68,11 @@ export default {
     }
   },
   methods:{
-    btn(index){
-      this.dynamic=index+1;
+    btn(index,active){
+      console.log(index);
+      this.active="index";
+      // this.dynamic=index;
+     
     }
   }
 }
