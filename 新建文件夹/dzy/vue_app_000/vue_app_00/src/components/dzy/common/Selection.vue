@@ -2,16 +2,18 @@
   <div class="container">
     <!-- 按钮 -->
     <div  >
-      <!--  -->
-      <mt-button v-for="(item,index) of list" :key="index" size="small"  @click="btn(index,active)" @click.native.prevent="active='index'" :class="{colorChange:index==dynamic}">{{item.name}}</mt-button>
-      <!-- <mt-button size="small" @click.native.prevent="active='1'">猜你喜欢</mt-button>
+      
+      <!-- <mt-button v-for="(item,index) of list" :key="index" size="small"  @click="btn(index,active)" @click.native.prevent="active='index'" :class="{colorChange:index==dynamic}">{{item.name}}</mt-button> -->
+
+      <mt-button size="small" @click.native.prevent="active='0'">全部分类</mt-button>
+      <mt-button size="small" @click.native.prevent="active='1'">猜你喜欢</mt-button>
       <mt-button size="small" @click.native.prevent="active='2'">鱼友推荐</mt-button>
       <mt-button size="small" @click.native.prevent="active='3'">豆瓣8.5</mt-button>
       <mt-button size="small" @click.native.prevent="active='4'">free</mt-button>
       <mt-button size="small" @click.native.prevent="active='5'">越贵越省钱</mt-button>
       <mt-button size="small" @click.native.prevent="active='6'">新上架</mt-button>
       <mt-button size="small" @click.native.prevent="active='7'">只在多抓鱼有</mt-button>
-      <mt-button size="small" @click.native.prevent="active='8'">新出版</mt-button> -->
+      <mt-button size="small" @click.native.prevent="active='8'">新出版</mt-button>
     </div>
     <!-- 子面板 -->
     <div class="selection">
